@@ -1,0 +1,43 @@
+<div id="<%= dom_id project %>">
+  <p>
+    <strong>Name:</strong>
+    <%= project.name %>
+  </p>
+
+  <p>
+    <strong>Project type:</strong>
+    <%= project.project_type %>
+  </p>
+
+  <p>
+    <strong>Customer contact person:</strong>
+    <%= project.customer_contact_person %>
+  </p>
+
+  <p>
+    <strong>Dues so far:</strong>
+    <%= project.dues_so_far %>
+  </p>
+
+  <p>
+    <strong>Potential next jobs from this client:</strong>
+    <%= project.potential_next_jobs_from_this_client %>
+  </p>
+
+  <%= project.body%>
+
+
+  <p>
+    <strong>Notes:</strong>
+    <%= project.notes %>
+  </p>
+
+  <br>
+
+  <%= link_to image_tag(project.image, style:"width:150px; height:150px" ),project.image %>
+<hr>
+  <% project.pictures.each do |picture| %>
+    <%= link_to image_tag(picture, style:"width:150px; height:150px"), picture %>
+  <% end %>
+
+</div>

@@ -1,0 +1,60 @@
+<%= form_with(model: project) do |form| %>
+  <% if project.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(project.errors.count, "error") %> prohibited this project from being saved:</h2>
+
+      <ul>
+        <% project.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :project_type, style: "display: block" %>
+    <%= form.number_field :project_type %>
+  </div>
+
+  <div>
+    <%= form.label :customer_contact_person, style: "display: block" %>
+    <%= form.text_field :customer_contact_person %>
+  </div>
+
+  <div>
+    <%= form.label :dues_so_far, style: "display: block" %>
+    <%= form.text_field :dues_so_far %>
+  </div>
+
+  <div>
+    <%= form.label :potential_next_jobs_from_this_client, style: "display: block" %>
+    <%= form.text_area :potential_next_jobs_from_this_client %>
+  </div>
+
+  <div >
+    <%= form.rich_text_area :body%>
+  </div>
+
+  <div>
+    <%= form.label :notes, style: "display: block" %>
+    <%= form.text_area :notes %>
+  </div>
+
+  <div>
+    <%= form.label :image %>
+    <%= form.file_field :image %>
+  </div>
+
+<div>
+  <%= form.label :pictures%>
+  <%= form.file_field :pictures, multiple: true%>
+</div>
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

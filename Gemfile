@@ -28,6 +28,8 @@ gem "tzinfo-data"
 gem 'bootstrap', '~> 5.1.3'
 gem 'devise', '~> 4.2'
 
+gem 'image_processing', '~> 1.2'
+
 
 
 

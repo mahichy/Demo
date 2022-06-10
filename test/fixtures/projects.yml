@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  project_type: 1
+  customer_contact_person: MyString
+  dues_so_far: 9.99
+  potential_next_jobs_from_this_client: MyText
+  notes: MyText
+
+two:
+  name: MyString
+  project_type: 1
+  customer_contact_person: MyString
+  dues_so_far: 9.99
+  potential_next_jobs_from_this_client: MyText
+  notes: MyText
