@@ -13,4 +13,8 @@ class Project < ApplicationRecord
 			picture.variant(resize_to_limit: [150, 150])
 		end
 	end
+
+	def picture_as_thumbnail(pic)
+		pic.variant(resize_to_limit: [200, 200]).processed
+	end
 end
